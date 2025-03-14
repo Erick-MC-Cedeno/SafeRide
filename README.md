@@ -1,8 +1,6 @@
 <div align="center">
       <h1> <img src="https://cdn-icons-png.flaticon.com/128/4277/4277508.png"><br/>Ryde</h1>
      </div>
-<p align="center"> <a href="https://x.com/arush_singh03" target="_blank"><img alt="" src="https://img.shields.io/badge/Twitter-1DA1F2?style=normal&logo=twitter&logoColor=white" style="vertical-align:center" /></a> <a href="https://www.instagram.com/arushsingh03/" target="_blank"><img alt="" src="https://img.shields.io/badge/Instagram-E4405F?style=normal&logo=instagram&logoColor=white" style="vertical-align:center" /></a> <a href="https://www.linkedin.com/in/arushsingh03}" target="_blank"><img alt="" src="https://img.shields.io/badge/LinkedIn-0077B5?style=normal&logo=linkedin&logoColor=white" style="vertical-align:center" /></a> </p>
-
 # Description
 The Ryde or Uber-clone is a React Native-based mobile application that mimics the core functionalities of ride-hailing services like Uber. The project focuses on building a robust and user-friendly platform that allows users to book rides, view ride details, and make payments seamlessly. The application integrates multiple technologies and services such as Clerk for authentication, Google Maps APIs for location and routing, Stripe for payment processing, NeonDB for database management, and TailwindCSS for styling.
 

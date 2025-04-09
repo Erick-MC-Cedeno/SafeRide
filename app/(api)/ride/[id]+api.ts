@@ -19,17 +19,17 @@ export async function GET(request: Request, { id }: { id?: string }) {
     const sql = neon(`${process.env.DATABASE_URL}`);
     const response = await sql`
       SELECT
-        ride.ride_id,
-        ride.origin_address,
-        ride.destination_address,
-        ride.origin_latitude,
-        ride.origin_longitude,
-        ride.destination_latitude,
-        ride.destination_longitude,
-        ride.ride_time,
-        ride.fare_price,
-        ride.payment_status,
-        ride.created_at,
+        rides.ride_id,
+        rides.origin_address,
+        rides.destination_address,
+        rides.origin_latitude,
+        rides.origin_longitude,
+        rides.destination_latitude,
+        rides.destination_longitude,
+        rides.ride_time,
+        rides.fare_price,
+        rides.payment_status,
+        rides.created_at,
         'driver', json_build_object(
           'driver_id', drivers.id,
           'first_name', drivers.first_name,
@@ -40,13 +40,13 @@ export async function GET(request: Request, { id }: { id?: string }) {
           'rating', drivers.rating
         ) AS driver 
       FROM 
-        ride
+        rides
       INNER JOIN
-        drivers ON ride.driver_id = drivers.id
+        drivers ON rides.driver_id = drivers.id
       WHERE 
-        ride.user_id = ${numericId}
+        rides.user_id = ${numericId}
       ORDER BY 
-        ride.created_at DESC;
+        rides.created_at DESC;
     `;
 
     console.log("Recent rides response:", response);

@@ -48,7 +48,7 @@ export async function POST(request: Request) {
         console.log("Numeric user id:", numericUserId);
 
         const response = await sql`
-        INSERT INTO ride (
+        INSERT INTO rides (
           origin_address, 
           destination_address, 
           origin_latitude, 
